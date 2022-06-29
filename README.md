@@ -1,6 +1,6 @@
 # TuringTech - Backend technical test (Intermediate)
 
-This test is a part of our hiring process for [backend positions](https://www.turingtechnologies.org/careers). It should take you between 2 and 4 hours depending on your experience. We made this task in a way that you'll end up learing how IVRs and Twilio's API works. This would definitely help in you in your future projects.
+This test is a part of our hiring process for [backend positions](https://www.turingtechnologies.org/careers). It should take you between 2 and 4 hours depending on your experience. We made this task in a way that you'll end up learing how IVRs and Twilio's API works. Working on this task will help you in your future projects.
 
 Hope you will have as much fun as we did coding this test!
 
