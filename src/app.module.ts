@@ -10,15 +10,27 @@ import { Calls, CallSchema } from './schemas/calls.schema';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(), 
+    /** .env configuration **/
+    ConfigModule.forRoot(),
+
+    
+    /** include db module monogodb **/
     MongooseModule.forRoot(process.env.DB_URL),
+
+
+    /** schema depency injection **/
     MongooseModule.forFeature([{name:Calls.name,schema:CallSchema}]),
+    
+
+    /** inlude twillio account **/
     TwilioModule.forRoot({
       accountSid: process.env.TWILIO_ACCOUNT_SID,
       authToken: process.env.TWILIO_AUTH_TOKEN,
     }),
   ],
   controllers: [AppController],
+
+  /** Add providers (AppService -> default service created by CLI) **/
   providers: [AppService,TwilioService,CallsService],
 })
 export class AppModule { }

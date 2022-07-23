@@ -28,6 +28,10 @@ export class AppController {
     this.callsService.logCall(req.body);
   }
 
+  /**
+   * 
+   * View -> hbs view templates -> To view call logs
+   */
 
   @Get("logs")
   @Render("index")
@@ -36,6 +40,11 @@ export class AppController {
     return { data }
   }
 
+
+  /**
+   * Default function created by CLI
+   * @returns String
+   */
   @Get()
   getHello(): string {
     return this.appService.getHello();
